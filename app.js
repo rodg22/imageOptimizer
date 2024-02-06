@@ -29,9 +29,25 @@ const askTargetWidth = () => {
 };
 
 const mensajeParaFinalizarOptimizacion = () => {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
   console.log(
     "La optimización de imagenes ha finalizado\nLas encontraras en la carpeta opt"
   );
+  // Imprime un mensaje y espera la entrada del usuario
+  rl.question("Presiona cualquier tecla para finalizar...", (answer) => {
+    // Cuando el usuario ingresa una tecla, cierra la interfaz readline
+    rl.close();
+  });
+
+  // Maneja el evento 'close' de la interfaz readline
+  rl.on("close", () => {
+    console.log("Saliendo...");
+    // Coloca aquí cualquier código que desees ejecutar antes de salir
+    process.exit(0); // Sale del proceso con código de éxito
+  });
 };
 
 const processImg = async () => {
