@@ -6,10 +6,31 @@ import imageminSvgo from "imagemin-svgo";
 import imageminWebp from "imagemin-webp";
 import imageminGifsicle from "imagemin-gifsicle";
 import sharp from "sharp";
+import readline from "readline";
 
 let inputFolder = "src";
 let outputFolder = "opt";
 let targetWidth = 1920;
+
+const finalizarOptimizacion = () => {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+  console.log("La optimización de imagenes ha finalizado");
+  // Imprime un mensaje y espera la entrada del usuario
+  rl.question("Presiona cualquier tecla para finalizar...", (answer) => {
+    // Cuando el usuario ingresa una tecla, cierra la interfaz readline
+    rl.close();
+  });
+
+  // Maneja el evento 'close' de la interfaz readline
+  rl.on("close", () => {
+    console.log("Saliendo...");
+    // Coloca aquí cualquier código que desees ejecutar antes de salir
+    process.exit(0); // Sale del proceso con código de éxito
+  });
+};
 
 const processImg = async () => {
   try {
@@ -35,9 +56,7 @@ const processImg = async () => {
         console.log(`Se ha optimizado la imagen: ${file}`);
       }
     }
-    console.log("Se ha terminado la optimización de todas las imágenes");
-    console.log("***Se cerrará el programa***");
-    setTimeout(console.log(""), 2000);
+    finalizarOptimizacion();
   } catch (error) {
     console.error(error);
   }
