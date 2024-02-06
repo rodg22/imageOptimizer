@@ -14,7 +14,13 @@ Coloca las imágenes que deseas optimizar en la carpeta `src`.
 
 ## Instalación y optimización - Opción 2
 
-Ejecuta el archivo: run_project.sh
+Ejecuta el archivo: first_time_install_and_run_project.sh
+
+## Optimizar luego de haber instalado
+
+Si ya instalaste con los comandos/archivo anterior y solamente quieres optimizar lo que hay en `src`.
+
+Puedes simplemente ejecutar el: execute_optimizer.sh
 
 ## Imagenes optimizadas
 

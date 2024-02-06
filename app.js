@@ -36,6 +36,8 @@ const processImg = async () => {
       }
     }
     console.log("Se ha terminado la optimización de todas las imágenes");
+    console.log("***Se cerrará el programa***");
+    setTimeout(console.log(""), 2000);
   } catch (error) {
     console.error(error);
   }
