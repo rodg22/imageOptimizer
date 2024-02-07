@@ -12,15 +12,20 @@ Coloca las imágenes que deseas optimizar en la carpeta `src`.
 
 2. Ejecuta el siguiente comando para iniciar el proceso de optimización: npm start
 
+3. Ingresá el width deseado para tus imagenes (el height se escalará automáticamente)
+
 ## Instalación y optimización - Opción 2
 
-Ejecuta el archivo: first_time_install_and_run_project.sh
+1. Ejecuta el archivo: first_time_install_and_run_project.sh
+   
+2. Ingresá el width deseado para tus imagenes (el height se escalará automáticamente)
+
 
 ## Optimizar luego de haber instalado
 
 Si ya instalaste con los comandos/archivo anterior y solamente quieres optimizar lo que hay en `src`.
 
-Puedes simplemente ejecutar el: execute_optimizer.sh
+Puedes simplemente ejecutar el: execute_optimizer.sh e indicar el width deseado para tus nuevas imagenes optimizadas.
 
 ## Imagenes optimizadas
 
